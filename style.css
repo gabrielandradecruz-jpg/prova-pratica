@@ -1,18 +1,21 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 20px;
-  background-color: #eef5fc;
-  color: #222;
+  background-color: #0b132b; /* Azul escuro profundo de fundo */
+  color: #f0f4f8; /* Texto claro para leitura no fundo escuro */
 }
 
 h1 {
   text-align: center;
-  font-size: 2.5rem;
-  background: linear-gradient(45deg, #0055bf, #00aaff);
+  font-size: 2.8rem;
+  /* Gradiente entre o azul claro vibrante e o azul Sonic */
+  background: linear-gradient(45deg, #00a8ff, #0055ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 p {
@@ -21,12 +24,13 @@ p {
   text-align: justify;
   line-height: 1.8;
   font-size: 1.1rem;
+  color: #d1e8ff;
 }
 
 .galeria {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 20px;
   flex-wrap: wrap;
   margin-top: 20px;
 }
@@ -35,13 +39,14 @@ p {
   width: 200px;
   height: 150px;
   object-fit: cover;
-  border: 3px solid #0055bf;
+  border: 3px solid #00a8ff; /* Borda em azul claro vibrante */
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 168, 255, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .galeria img:hover {
   transform: scale(1.08);
-  box-shadow: 0 8px 16px rgba(0, 85, 191, 0.4);
+  border-color: #ffc700; /* Borda muda para amarelo ouro ao passar o mouse */
+  box-shadow: 0 8px 20px rgba(0, 168, 255, 0.6);
 }
