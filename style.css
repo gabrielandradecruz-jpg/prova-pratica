@@ -34,12 +34,19 @@ p {
   margin-top: 20px;
 }
 
+/* O card vira um rótulo clicável */
 .card-imagem {
   position: relative;
   display: inline-block;
   cursor: pointer;
 }
 
+/* Esconde a caixinha de seleção padrão */
+.card-imagem input {
+  display: none;
+}
+
+/* Estilo da imagem igualzinho ao seu original */
 .card-imagem img {
   width: 200px;
   height: 150px;
@@ -57,6 +64,7 @@ p {
   box-shadow: 0 8px 20px rgba(0, 168, 255, 0.6);
 }
 
+/* O texto fica escondido por padrão */
 .overlay-texto {
   position: absolute;
   top: 0;
@@ -75,14 +83,13 @@ p {
   text-align: center;
   z-index: 10;
   
-  /* O texto fica escondido por padrão */
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-/* Mostra o texto enquanto você clica/pressiona a imagem */
-.card-imagem:active .overlay-texto {
+/* Quando a caixinha for marcada (clicando na imagem), o texto aparece */
+.card-imagem input:checked ~ .overlay-texto {
   opacity: 1;
   visibility: visible;
 }
